@@ -2,8 +2,26 @@ Mon 21 Jan 2019 07:52:23 PM EET
 	tucu-april run for saltena campaign.
 
 Mon 21 Jan 2019 07:57:24 PM EET
-	created soft link cfsv2-data -> /wrk/aliagadi/DONOTREMOVE/saltena_2018/first_try
+	created soft link cfsv2-data -> /wrk/aliagadi/DONOTREMOVE/saltena_2018/first_try/data
 	leaving data files downloading
 	data range is: 2018.04.01-10
+Mon 21 Jan 2019 08:12:28 PM EET
+	finish downloading data 
+	uncompressing at data folder
+Mon 21 Jan 2019 08:20:22 PM EET
+	coying scripts needed to run on sbatch. changing names to make them more understandable 
+	starting git 
+		adding all bash files + README 
+Mon 21 Jan 2019 08:27:12 PM EET
+	copying namelist.input from four_domain tryout 
+	adding it to git 
 
- 
+Mon 21 Jan 2019 08:30:00 PM EET
+	done uncompressing folder (18 min)
+	rm tar files to free space 	
+
+Mon 21 Jan 2019 09:05:52 PM EET
+	soft linkin namelist.wps from tucu-april to wps folder 
+	rm old file *.nc *grib etc 
+	running geogrid.exe
+	* dont forget to source env_WRFv4.bash 
