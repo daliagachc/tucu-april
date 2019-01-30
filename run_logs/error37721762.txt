@@ -1,0 +1,23 @@
+ Name of source model =>NCEP CDAS CFSV2         GRID   4
+ Name of source model =>NCEP CDAS CFSV2         GRID   4
+ Name of source model =>NCEP CDAS CFSV2         GRID   4
+ Name of source model =>NCEP CDAS CFSV2         GRID   4
+ Name of source model =>NCEP CDAS CFSV2         GRID   4
+ Name of source model =>NCEP CDAS CFSV2         GRID   4
+ Name of source model =>NCEP CDAS CFSV2         GRID   4
+ Name of source model =>NCEP CDAS CFSV2         GRID   4
+ Name of source model =>NCEP CDAS CFSV2         GRID   4
+ Name of source model =>NCEP CDAS CFSV2         GRID   4
+At line 136 of file rrpr.f90 (unit = 13)
+Fortran runtime error: Cannot open file './PFILE:2018-04-05_16': No such file or directory
+
+Error termination. Backtrace:
+#0  0x7f0162209f54 in already_open
+	at ../../../gcc-7.3.0/libgfortran/io/open.c:704
+#1  0x411056 in ???
+#2  0x408c62 in ???
+#3  0x409022 in ???
+#4  0x7f0161635d1f in ???
+#5  0x402828 in ???
+srun: error: c732: task 0: Exited with exit code 2
+srun: Terminating job step 37721762.0

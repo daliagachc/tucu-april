@@ -13,7 +13,7 @@
 source $USERAPPL/env_WRFv4.bash
 
 
-run_dir=${WRKDIR}/DONOTREMOVE/tryout_2008/four_domain/
+run_dir=${WRKDIR}/DONOTREMOVE/saltena_2018/tucu-april-data/WRF/
 
 exe_wrf=wrf.exe 
 cd ${run_dir}

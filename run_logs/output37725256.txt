@@ -1,0 +1,163 @@
+Processing domain 1 of 4
+ Processing 2018-04-05_06
+    HOURLY
+    SIX_HOURLY
+ Processing 2018-04-05_07
+    HOURLY
+    SIX_HOURLY
+ Processing 2018-04-05_08
+    HOURLY
+    SIX_HOURLY
+ Processing 2018-04-05_09
+    HOURLY
+    SIX_HOURLY
+ Processing 2018-04-05_10
+    HOURLY
+    SIX_HOURLY
+ Processing 2018-04-05_11
+    HOURLY
+    SIX_HOURLY
+ Processing 2018-04-05_12
+    HOURLY
+    SIX_HOURLY
+ Processing 2018-04-05_13
+    HOURLY
+    SIX_HOURLY
+ Processing 2018-04-05_14
+    HOURLY
+    SIX_HOURLY
+ Processing 2018-04-05_15
+    HOURLY
+    SIX_HOURLY
+ Processing 2018-04-05_16
+    HOURLY
+    SIX_HOURLY
+ Processing 2018-04-05_17
+    HOURLY
+    SIX_HOURLY
+ Processing 2018-04-05_18
+    HOURLY
+    SIX_HOURLY
+Processing domain 2 of 4
+ Processing 2018-04-05_06
+    HOURLY
+    SIX_HOURLY
+ Processing 2018-04-05_07
+    HOURLY
+    SIX_HOURLY
+ Processing 2018-04-05_08
+    HOURLY
+    SIX_HOURLY
+ Processing 2018-04-05_09
+    HOURLY
+    SIX_HOURLY
+ Processing 2018-04-05_10
+    HOURLY
+    SIX_HOURLY
+ Processing 2018-04-05_11
+    HOURLY
+    SIX_HOURLY
+ Processing 2018-04-05_12
+    HOURLY
+    SIX_HOURLY
+ Processing 2018-04-05_13
+    HOURLY
+    SIX_HOURLY
+ Processing 2018-04-05_14
+    HOURLY
+    SIX_HOURLY
+ Processing 2018-04-05_15
+    HOURLY
+    SIX_HOURLY
+ Processing 2018-04-05_16
+    HOURLY
+    SIX_HOURLY
+ Processing 2018-04-05_17
+    HOURLY
+    SIX_HOURLY
+ Processing 2018-04-05_18
+    HOURLY
+    SIX_HOURLY
+Processing domain 3 of 4
+ Processing 2018-04-05_06
+    HOURLY
+    SIX_HOURLY
+ Processing 2018-04-05_07
+    HOURLY
+    SIX_HOURLY
+ Processing 2018-04-05_08
+    HOURLY
+    SIX_HOURLY
+ Processing 2018-04-05_09
+    HOURLY
+    SIX_HOURLY
+ Processing 2018-04-05_10
+    HOURLY
+    SIX_HOURLY
+ Processing 2018-04-05_11
+    HOURLY
+    SIX_HOURLY
+ Processing 2018-04-05_12
+    HOURLY
+    SIX_HOURLY
+ Processing 2018-04-05_13
+    HOURLY
+    SIX_HOURLY
+ Processing 2018-04-05_14
+    HOURLY
+    SIX_HOURLY
+ Processing 2018-04-05_15
+    HOURLY
+    SIX_HOURLY
+ Processing 2018-04-05_16
+    HOURLY
+    SIX_HOURLY
+ Processing 2018-04-05_17
+    HOURLY
+    SIX_HOURLY
+ Processing 2018-04-05_18
+    HOURLY
+    SIX_HOURLY
+Processing domain 4 of 4
+ Processing 2018-04-05_06
+    HOURLY
+    SIX_HOURLY
+ Processing 2018-04-05_07
+    HOURLY
+    SIX_HOURLY
+ Processing 2018-04-05_08
+    HOURLY
+    SIX_HOURLY
+ Processing 2018-04-05_09
+    HOURLY
+    SIX_HOURLY
+ Processing 2018-04-05_10
+    HOURLY
+    SIX_HOURLY
+ Processing 2018-04-05_11
+    HOURLY
+    SIX_HOURLY
+ Processing 2018-04-05_12
+    HOURLY
+    SIX_HOURLY
+ Processing 2018-04-05_13
+    HOURLY
+    SIX_HOURLY
+ Processing 2018-04-05_14
+    HOURLY
+    SIX_HOURLY
+ Processing 2018-04-05_15
+    HOURLY
+    SIX_HOURLY
+ Processing 2018-04-05_16
+    HOURLY
+    SIX_HOURLY
+ Processing 2018-04-05_17
+    HOURLY
+    SIX_HOURLY
+ Processing 2018-04-05_18
+    HOURLY
+    SIX_HOURLY
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  Successful completion of metgrid.  !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

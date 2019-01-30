@@ -21,13 +21,15 @@ export wrf_dir=${USERAPPL}/WRF4/WRF/
 # set the directory where you have your met_em* files
 # I moved these into their own directory
 # !! EDIT THIS!!
-export wps_dir=${USERAPPL}/WRF4/WPS/
+export wps_dir=${WRKDIR}/DONOTREMOVE/saltena_2018/tucu-april-data/WPS/
 
 # set the directory where you want to run WRF / where the output will be
 #  !!! EDIT THIS !!!
-export run_dir=${WRKDIR}/DONOTREMOVE/tryout_2008/four_domain/
+export run_dir=${WRKDIR}/DONOTREMOVE/saltena_2018/tucu-april-data/WRF/
+
 
 mkdir -p ${run_dir}
+cp ./namelist.input ${run_dir}
 cd ${run_dir}
 
 echo link executables 
@@ -50,7 +52,7 @@ ln -sf ${wrf_dir}/run/ozone* .
 echo linking met files
 ln -sf ${wps_dir}/met_em* .
 
-cp ${wrf_dir}/run/namelist.input .
+#cp ${wrf_dir}/run/namelist.input .
 
 
 

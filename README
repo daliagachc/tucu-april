@@ -25,3 +25,67 @@ Mon 21 Jan 2019 09:05:52 PM EET
 	rm old file *.nc *grib etc 
 	running geogrid.exe
 	* dont forget to source env_WRFv4.bash 
+Mon 21 Jan 2019 09:14:03 PM EET
+	done running geogrib. 
+	link Vtable 
+	link_grib.csh to link data 
+
+Mon 21 Jan 2019 09:22:29 PM EET
+	forgot to change date at namelis.wps. change it and running metgrid.exe
+
+Tue 22 Jan 2019 11:14:17 AM EET
+	im getting this error about the first date not existing when running metgrid: 
+
+	Subroutine DATINT: Interpolating 3-d files to fill in any missing data...
+	Looking for data at time 2018-04-01_06
+	ERROR: Data not found: 2018-04-01_06:00:00.0000
+
+
+Wed 23 Jan 2019 01:11:25 PM EET
+	aparently is more complex to run cfsv2 as compared to cfsr. 
+	i found this post with useful info:
+		http://forum.wrfforum.com/viewtopic.php?f=6&t=9558
+	also i needed to download the correct Vtables
+		Vtable.CFSR_sfc_flxf06
+		Vtable.CFSR_press_pgbh06
+	from 
+		http://www2.mmm.ucar.edu/wrf/users/download/free_data.html
+
+Wed 23 Jan 2019 02:08:40 PM EET
+	created 2 dirs: sur and pre to download respective data. 
+
+Wed 23 Jan 2019 03:18:06 PM EET
+	files downloaded
+
+Wed 23 Jan 2019 05:07:46 PM EET
+	run ungrib with multiple cores and found the error:
+		│ERROR: unknown out_format, ifv =
+	forum post: http://forum.wrfforum.com/viewtopic.php?f=21&t=8358
+	suggests to run as a sinfle process instead to fix this error 
+
+Wed 23 Jan 2019 06:18:18 PM EET 
+	run ungrib again but with 12 cores and giving 1h clocktime since 10m was not enough.
+
+Wed 23 Jan 2019 06:50:01 PM EET
+	again same error. running on serial mode and increasing mem to 8 G 
+	error egain. 
+Wed 23 Jan 2019 08:11:29 PM EET
+	the problem is that file are named the same inside tar so we need a different command to uname those. 
+	before i was using:
+		for f in *.tar; do tar xf $f; done
+	now: 
+		for f in *.tar; do tar --transform=s/^/pre_${f}_/S -xf $f; done
+	with this, file are untared with the source file name prepended
+
+Thu 24 Jan 2019 10:58:56 AM EET
+	run out of space in the app directory while running ungrid. i should copy the executables to the working directory and run from there. i can even copy the whole WPS directory since it is below 100mb. 3 
+
+
+Thu 24 Jan 2019 01:34:26 PM EET
+	manange to run ungrib.exe for HOURLY 
+
+Thu 24 Jan 2019 02:02:10 PM EET
+	aparently the default vtable that comes with wps fro cfsr model is enough as it contains the coordenates vro both the surface and the pressure files
+
+Thu 24 Jan 2019 03:05:02 PM EET
+	done running metgrid. now time to run real 
