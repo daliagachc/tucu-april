@@ -79,7 +79,7 @@
     maxens2 = 3
     maxens3 = 16
     ensdim = 144
-    sst_update = 1
+    sst_update = 0
     slope_rad = 0, 0, 1, 1
     topo_shading = 0, 0, 1, 1
 /

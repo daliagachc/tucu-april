@@ -21,14 +21,15 @@ export wrf_dir=${USERAPPL}/WRF4/WRF/
 # set the directory where you have your met_em* files
 # I moved these into their own directory
 # !! EDIT THIS!!
-export wps_dir=${WRKDIR}/DONOTREMOVE/saltena_2018/tucu-april-data/WPS/
+export wps_dir=${WRKDIR}/DONOTREMOVE/saltena_2018/tucu-april-data-v02/WPS/
 
 # set the directory where you want to run WRF / where the output will be
 #  !!! EDIT THIS !!!
-export run_dir=${WRKDIR}/DONOTREMOVE/saltena_2018/tucu-april-data/WRF/
+export run_dir=${WRKDIR}/DONOTREMOVE/saltena_2018/tucu-april-data-v02/WRF/
 
 
 mkdir -p ${run_dir}
+rm ${run_dir}namelist.input
 cp ./namelist.input ${run_dir}
 cd ${run_dir}
 
