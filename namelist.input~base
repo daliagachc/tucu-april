@@ -11,20 +11,16 @@
  end_month                           = 04,	04,	04,	04,
  end_day                             = 05,	05,	05,	05,
  end_hour                            = 18,	18,	18,	18,
- interval_seconds                    = 21600
+ interval_seconds                    = 3600
  input_from_file                     = .true.,.true.,.true.,.true.,
  history_interval                    = 360,	360,	360,	360,
- frames_per_outfile                  = 1,    1,    1,    1,
+ frames_per_outfile                  = 1,	1,	1,	,
  restart                             = .false.,
  restart_interval                    = 360,
  io_form_history                     = 2
  io_form_restart                     = 2
  io_form_input                       = 2
  io_form_boundary                    = 2
- io_form_auxinput4                   = 2
- auxinput4_inname                    = "wrflowinp_d<domain>"
- auxinput4_interval                  = 360, 360, 360, 360,
- debug_level                         = 0
  /
 
  &domains
@@ -52,39 +48,19 @@
 
  &physics
  physics_suite                       = 'tropical'          
- mp_physics                          = 7, 7, 7, 7,
- cu_physics                          = 3, 3, 0, 0,
- ra_lw_physics                       = 5, 5, 5, 5,
- ra_sw_physics                       = 5, 5, 5, 5,
- bl_pbl_physics                      = 2, 2, 2, 2,
- sf_sfclay_physics                   = 2,     2,     2,     2,
- sf_surface_physics                  = 2,     2,     2,     2,
- radt                                = 30,    10,    3,     1,
+ mp_physics                          = -1,	-1,	-1,	-1,
+ cu_physics                          = -1,	-1,	-1,	-1,
+ ra_lw_physics                       = -1,	-1,	-1,	-1,
+ ra_sw_physics                       = -1,	-1,	-1,	-1,
+ bl_pbl_physics                      = -1,	-1,	-1,	-1,
+ sf_sfclay_physics                   = -1,	-1,	-1,	-1,
+ sf_surface_physics                  = -1,	-1,	-1,	-1,
+ radt                                = 30,	30,	30,	30,
  bldt                                = 0,	0,	0,	0,
  cudt                                = 5,	5,	5,	5,
  icloud                              = 1,
  num_land_cat                        = 21,
  sf_urban_physics                    = 0,	0,	0,	0,
- cam_abs_freq_s                      = 21600,
- levsiz                              = 59,
- paerlev                             = 29,
- cam_abs_dim1                        = 4,
- cam_abs_dim2                        = 45,
- isfflx                              = 1,
- ifsnow                              = 1,
- seaice_threshold                    = 263.,
- surface_input_source                = 1,
- num_soil_layers                     = 4,
- rdmaxalb                            = .true.,
- mp_zero_out                         = 0,
- maxiens                             = 1,
- maxens                              = 3,
- maxens2                             = 3,
- maxens3                             = 16,
- ensdim                              = 144,
- sst_update                          = 1,
- slope_rad                           = 0,     0,     1,     1,
- topo_shading                        = 0,     0,     1,     1,
  /
 
  &fdda
@@ -92,9 +68,9 @@
 
  &dynamics
  hybrid_opt                          = 2, 
- w_damping                           = 1,
- diff_opt                            = 1,
- km_opt                              = 4,
+ w_damping                           = 0,
+ diff_opt                            = 1,	1,	1,	1,
+ km_opt                              = 4,	4,	4,	4,
  diff_6th_opt                        = 0,	0,	0,	0,
  diff_6th_factor                     = 0.12,	0.12,	0.12,	0.12,
  base_temp                           = 290.
@@ -111,10 +87,7 @@
 
  &bdy_control
  spec_bdy_width                      = 5,
- specified                           = .true., .false.,.false.,.false.,
- spec_zone                           = 1,
- relax_zone                          = 4,
- nested                              = .false., .true., .true., .true.,
+ specified                           = .true.
  /
 
  &grib2
