@@ -1,0 +1,1 @@
+rm: cannot remove `/wrk/aliagadi/DONOTREMOVE/saltena_2018/tucu-april-data-v02/WRF/namelist.input': No such file or directory

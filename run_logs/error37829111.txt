@@ -1,0 +1,4 @@
+ starting wrf task            0  of            1
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: error: c889: task 0: Exited with exit code 1
+srun: Terminating job step 37829111.0
