@@ -35,8 +35,8 @@
     p_top_requested = 5000
     num_metgrid_levels = 38
     num_metgrid_soil_levels = 4
-    dx = 38000.0, 9500.0, 12666.667, 12666.667
-    dy = 38000.0, 9500.0, 12666.667, 12666.667
+    dx = 38000.0, 9500.0, 3166.6667, 1055.5556
+    dy = 38000.0, 9500.0, 3166.6667, 1055.5556
     grid_id = 1, 2, 3, 4
     parent_id = 1, 1, 2, 3
     i_parent_start = 1, 28, 80, 70
@@ -79,7 +79,7 @@
     maxens2 = 3
     maxens3 = 16
     ensdim = 144
-    sst_update = 0
+    sst_update = 1
     slope_rad = 0, 0, 1, 1
     topo_shading = 0, 0, 1, 1
 /
