@@ -30,7 +30,7 @@
 
 &ungrib
     out_format = 'WPS'
-    prefix = 'PRESSURE'
+    prefix = 'SURFACE'
 /
 
 &metgrid
