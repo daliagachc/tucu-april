@@ -1,0 +1,14 @@
+rm: cannot remove `./tucu-april-data/WPS/Vtable': No such file or directory
+ Name of source model =>NCEP CDAS CFSV2         GRID   4
+ Name of source model =>NCEP CDAS CFSV2         GRID   4
+ Name of source model =>NCEP CDAS CFSV2         GRID   4
+ Name of source model =>NCEP CDAS CFSV2         GRID   4
+ Name of source model =>NCEP CDAS CFSV2         GRID   4
+ Name of source model =>NCEP CDAS CFSV2         GRID   4
+ Name of source model =>NCEP CDAS CFSV2         GRID   4
+ Name of source model =>NCEP CDAS CFSV2         GRID   4
+ Name of source model =>NCEP CDAS CFSV2         GRID   4
+ Name of source model =>NCEP CDAS CFSV2         GRID   4
+ Name of source model =>NCEP CDAS CFSV2         GRID   4
+ Name of source model =>NCEP CDAS CFSV2         GRID   4
+ Name of source model =>NCEP CDAS CFSV2         GRID   4

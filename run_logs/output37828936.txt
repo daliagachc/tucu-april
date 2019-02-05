@@ -1,0 +1,6 @@
+link executables
+link gribmap info
+linking to RRTM_DATA
+linking to look-up tables
+linking to ozone data
+linking met files

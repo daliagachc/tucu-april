@@ -13,7 +13,9 @@
 source $USERAPPL/env_WRFv4.bash
 
 
-run_dir=${WRKDIR}/DONOTREMOVE/saltena_2018/tucu-april-data/WRF/
+run_dir=${WRKDIR}/DONOTREMOVE/saltena_2018/tucu-april-data-v02/WRF/
+rm ${run_dir}/namelist.input
+cp ./namelist.input ${run_dir}/
 
 exe_wrf=wrf.exe 
 cd ${run_dir}

@@ -1,0 +1,5 @@
+ starting wrf task            0  of            1
+slurmstepd: error: *** STEP 37829244.0 ON c895 CANCELLED AT 2019-02-05T16:28:19 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: error: c895: task 0: Exited with exit code 1
+srun: Terminating job step 37829244.0
