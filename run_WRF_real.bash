@@ -12,7 +12,7 @@
 source $USERAPPL/env_WRFv4.bash
 
 
-run_dir=${WRKDIR}/DONOTREMOVE/saltena_2018/tucu-april-data-v02/WRF/
+run_dir=./tucu-april-data/WRF/
 rm ${run_dir}/namelist.input
 cp ./namelist.input ${run_dir}/
 
