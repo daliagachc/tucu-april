@@ -13,7 +13,7 @@
     end_hour = 12, 12, 12, 12
     interval_seconds = 21600
     input_from_file = .true., .true., .true., .true.
-    history_interval = 10
+    history_interval = 10, 10, 10, 10
     frames_per_outfile = 1, 1, 1, 1
     restart = .false.
     restart_interval = 360
