@@ -98,4 +98,14 @@ Wed Feb  6 12:28:59 2019
 	- goals 
 		run just 1 hour 
 		10 minute history 
+Wed 06 Feb 2019 04:28:07 PM EET
+	started git v04 
+	inputs from master version 
+	else similar to v03 
+	idea is to check if i get the 
+	4 domain output that i dint get in 
+	v03	
 
+Wed 06 Feb 2019 04:41:57 PM EET
+	again only output for one domain. 
+	aparently the problem is related to running the model just for 1 hour
