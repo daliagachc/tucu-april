@@ -98,4 +98,9 @@ Wed Feb  6 12:28:59 2019
 	- goals 
 		run just 1 hour 
 		10 minute history 
+Wed 06 Feb 2019 04:47:33 PM EET
+	- running again but this time with 6 hours to see if i get out for all domains	
 
+Wed 06 Feb 2019 05:27:18 PM EET
+	finally found the problem:
+	history_interval (in namelist.input) must be defined for all domains otherwise its assumed to be 0! 
