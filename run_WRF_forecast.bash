@@ -5,7 +5,7 @@
 #SBATCH -n 24
 #SBATCH -t 10:00:00
 #SBATCH -p parallel
-#SBATCH --mem-per-cpu=8000
+#SBATCH --mem-per-cpu=1000
 #SBATCH --mail-type=END
 #SBATCH --mail-user=diego.aliaga@helsinki.fi
 
@@ -13,7 +13,7 @@
 source $USERAPPL/env_WRFv4.bash
 
 
-run_dir=${WRKDIR}/DONOTREMOVE/saltena_2018/tucu-april-data-v02/WRF/
+run_dir=./tucu-april-data/WRF/
 rm ${run_dir}/namelist.input
 cp ./namelist.input ${run_dir}/
 
