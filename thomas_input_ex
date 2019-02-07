@@ -176,6 +176,7 @@ cat > namelist.input << EOF
 
  /
 
+
  &bdy_control
  spec_bdy_width                      = 5,
  specified                           = .true., .false.,.false.,.false.,

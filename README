@@ -104,3 +104,12 @@ Wed 06 Feb 2019 04:47:33 PM EET
 Wed 06 Feb 2019 05:27:18 PM EET
 	finally found the problem:
 	history_interval (in namelist.input) must be defined for all domains otherwise its assumed to be 0! 
+
+Wed 06 Feb 2019 09:55:42 PM EET
+	running v05 with 3 days ~ 
+	error for real ~ not enough memory
+	memory was 4 g now is 8 g 
+	increased running time for wrf from 10 to 20 hours
+
+Thu 07 Feb 2019 02:04:34 PM EET
+	run was succesfull. it was completed at 7:45 am EET (~10 hours) 
