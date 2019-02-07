@@ -116,4 +116,4 @@ Thu 07 Feb 2019 02:04:34 PM EET
 
 Thu 07 Feb 2019 02:28:43 PM EET
 	now trying v06 similar to v05 but with 32 cores instead of 24. lets see if we can reproduce the previous error. 
-	error reproduced. see file rsl.out.0000
+	error reproduced. see file ./run_logs/rsl.out.0000
