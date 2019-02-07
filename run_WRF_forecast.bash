@@ -2,7 +2,7 @@
 #SBATCH -e error%j.txt
 #SBATCH -o output%j.txt 
 #SBATCH -J WRF_forecast
-#SBATCH -n 24
+#SBATCH -n 32
 #SBATCH -t 20:00:00
 #SBATCH -p parallel
 #SBATCH --mem-per-cpu=1000
