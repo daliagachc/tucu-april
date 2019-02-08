@@ -13,7 +13,7 @@
 # ---
 
 import f90nml
-
+import numpy as np
 file_path = '../namelist.wps'
 inp = f90nml.read(file_path)
 
