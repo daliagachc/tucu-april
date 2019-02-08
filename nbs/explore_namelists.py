@@ -1,33 +1,30 @@
-
-# coding: utf-8
-
-# In[12]:
-
+# ---
+# jupyter:
+#   jupytext:
+#     text_representation:
+#       extension: .py
+#       format_name: light
+#       format_version: '1.3'
+#       jupytext_version: 0.8.6
+#   kernelspec:
+#     display_name: Python 3
+#     language: python
+#     name: python3
+# ---
 
 import f90nml
-import numpy as np
-
-# In[13]:
-
 
 file_path = '../namelist.wps'
 inp = f90nml.read(file_path)
 
-
-# In[14]:
-
-
 doms = 4
 start_date = '2018-04-05_06:00:00'
-end_date = '2018-04-05_07:00:00'
+end_date = '2018-04-08_06:00:00'
 interval_seconds = 6*3600 # seconds
 history_interval = 10 #minutes
 time_step = 90 #secs for wrf. higher number produced error 
 
-
-# In[15]:
-
-
+# +
 shar = inp['share']
 
 shar['start_date']=[start_date]*doms 
@@ -36,11 +33,12 @@ shar['interval_seconds']=interval_seconds
 
 geo = inp['geogrid']
 geo['parent_grid_ratio'] = [1,4,3,3]
-geo['i_parent_start'] = [1,28,80,70]
-geo['j_parent_start'] = [1,18,65,122]
+geo['i_parent_start'] = [1,28,80,61]
+geo['j_parent_start'] = [1,18,65,110]
 
-geo['e_we']= [118, 253, 274, 100]
-geo['e_sn']= [86, 205, 214, 79]
+geo['e_we']= [118, 253, 274, 151]
+geo['e_sn']= [86, 205, 214, 151]
+geo['e_vert']= [50, 50, 50, 50]
 geo['dx']= 38000
 geo['dy']= 38000
 geo['map_proj']= 'mercator'
@@ -56,37 +54,20 @@ ung['prefix'] = 'SURFACE'
 met = inp['metgrid']
 met['fg_name'] = ['SURFACE','PRESSURE']
 
-
-# In[16]:
-
+# -
 
 inp
 
-
-# In[17]:
-
-
 f90nml.write(inp,file_path,force=True)
 
-
 # # namelist.input 
-
-# In[18]:
-
 
 wrf_namelist = '../namelist.input'
 inp_wrf = f90nml.read(wrf_namelist)
 
-
-# In[19]:
-
-
 import datetime
 
-
-# In[20]:
-
-
+# +
 def str2dat(st): 
     dt = datetime.datetime.strptime(st,'%Y-%m-%d_%H:%M:%S')
     return dt 
@@ -103,10 +84,7 @@ e_m = end_dt.month
 e_d = end_dt.day
 e_h = end_dt.hour
 
-
-# In[21]:
-
-
+# +
 tc_wrf = inp_wrf['time_control']
 
 tc_wrf['start_year'] = [s_y]*doms
@@ -120,7 +98,7 @@ tc_wrf['end_day'] = [e_d]*doms
 tc_wrf['end_hour'] = [e_h]*doms
 
 tc_wrf['interval_seconds'] = interval_seconds
-tc_wrf['history_interval'] = history_interval
+tc_wrf['history_interval'] = [history_interval]*4
 
 do_wrf = inp_wrf['domains']
 
@@ -148,10 +126,8 @@ do_wrf['parent_time_step_ratio'] = geo['parent_grid_ratio'] #copying from thomas
 
 
 inp_wrf
-
-
-# In[22]:
-
+# -
 
 f90nml.write(inp_wrf,wrf_namelist,force=True)
+
 
