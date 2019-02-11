@@ -26,12 +26,11 @@
     truelat2 = 60.0
     stand_lon = -66.3
     geog_data_path = '/proj/atm/WRF/WPS_GEOG/'
-    e_vert = 50, 50, 50, 50
 /
 
 &ungrib
     out_format = 'WPS'
-    prefix = 'SURFACE'
+    prefix = 'PRESSURE'
 /
 
 &metgrid

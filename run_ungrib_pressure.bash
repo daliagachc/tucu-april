@@ -1,6 +1,6 @@
 #!/bin/bash
-#SBATCH -e error%j.txt
-#SBATCH -o output%j.txt 
+#SBATCH -e ./run_logs/error%j.txt
+#SBATCH -o ./run_logs/output%j.txt 
 #SBATCH -n 1	
 #SBATCH -t 04:10:00
 #SBATCH -p serial
@@ -26,5 +26,5 @@ cp ./Vtable.CFSR ${run_dir}/Vtable
 cd ${run_dir}
 ./link_grib.csh ../${pre_short}/${pre_short}_
 ## run the executable
-#srun ${exe}
+srun ${exe}
 

@@ -10,8 +10,8 @@
 
 # first set the environemt
 source ./env_WRFv4.bash
-pre=PRESSURE
-pre_short=pre
+pre=SURFACE
+pre_short=sur
 run_dir=./tucu-april-data/WPS
 exe=ungrib.exe
 
@@ -26,5 +26,5 @@ cp ./Vtable.CFSR ${run_dir}/Vtable
 cd ${run_dir}
 ./link_grib.csh ../${pre_short}/${pre_short}_
 ## run the executable
-#srun ${exe}
+srun ${exe}
 

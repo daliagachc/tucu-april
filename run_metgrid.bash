@@ -1,6 +1,6 @@
 #!/bin/bash
-#SBATCH -e error%j.txt
-#SBATCH -o output%j.txt 
+#SBATCH -e ./run_logs/error%j.txt
+#SBATCH -o ./run_logs/output%j.txt 
 #SBATCH -n 1	
 #SBATCH -t 03:10:00
 #SBATCH -p serial

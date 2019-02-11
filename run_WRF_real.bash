@@ -9,7 +9,7 @@
 #SBATCH --mail-user=diego.aliaga@helsinki.fi
 
 # first set the environemt
-source $USERAPPL/env_WRFv4.bash
+source ./env_WRFv4.bash
 
 
 run_dir=./tucu-april-data/WRF/

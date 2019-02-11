@@ -13,17 +13,16 @@
 # ---
 
 import f90nml
-import numpy as np
+
 file_path = '../namelist.wps'
 inp = f90nml.read(file_path)
 
 doms = 4
 start_date = '2018-04-05_06:00:00'
-end_date = '2018-04-08_06:00:00'
+end_date = '2018-04-05_12:00:00'
 interval_seconds = 6*3600 # seconds
 history_interval = 10 #minutes
 time_step = 90 #secs for wrf. higher number produced error 
-e_vert= [50, 50, 50, 50]
 
 # +
 shar = inp['share']
@@ -34,11 +33,11 @@ shar['interval_seconds']=interval_seconds
 
 geo = inp['geogrid']
 geo['parent_grid_ratio'] = [1,4,3,3]
-geo['i_parent_start'] = [1,28,80,61]
-geo['j_parent_start'] = [1,18,65,110]
+geo['i_parent_start'] = [1,28,80,70]
+geo['j_parent_start'] = [1,18,65,122]
 
-geo['e_we']= [118, 253, 274, 151]
-geo['e_sn']= [86, 205, 214, 151]
+geo['e_we']= [118, 253, 274, 100]
+geo['e_sn']= [86, 205, 214, 79]
 geo['dx']= 38000
 geo['dy']= 38000
 geo['map_proj']= 'mercator'
@@ -105,7 +104,6 @@ do_wrf = inp_wrf['domains']
 do_wrf['time_step'] = time_step 
 do_wrf['e_we'] = geo['e_we'] 
 do_wrf['e_sn'] = geo['e_sn'] 
-do_wrf['e_vert'] = e_vert
 
 acc_rat_list = [geo['parent_grid_ratio'][0]]
 for i,n in enumerate(geo['parent_grid_ratio'][1:]):
