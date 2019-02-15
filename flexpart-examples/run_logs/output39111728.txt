@@ -1,0 +1,56 @@
+ the input file used is flexwrf.input in the local folder of the executable
+ Pre-generating random numbers
+ Calling readinput
+ Opening 'flexwrf.input                                                                                                                                                                                           ' for reading
+ Reading pathnames
+ option_verbose=         100
+              ----------------               
+  INFORMATION: SUBGRIDSCALE TERRAIN EFFECT IS
+  NOT PARAMETERIZED DURING THIS SIMULATION.  
+              ----------------               
+ SFC_OPTION =           0
+ nageclass           2
+ Opening file: ./AVAILABLE4 for reading
+ readinput() calling gridcheck()
+
+test_xyindex_to_ll_wrf calling map_set -- map_proj_id, map_set_proj_code =    3    1
+
+test_xyindex_to_ll_wrf -- lgrid, rmserr (km) =  0  6.08E-04
+
+
+
+# of vertical levels in WRF data
+    n_bottom_top & "true" nuvz:     49     49
+    nwz &     "augmented" nuvz:     50     50
+
+    nwzmax, nuvzmax, nzmax    :     61     61     61
+    nconvlevmax, nconvlev     :     60     48
+    nx, ny, nxmax, nymax      :    150    150    250    190
+
+Mother domain:
+  east-west   range:        0.0   157277.8   Grid distance:     1055.6
+  south-north range:        0.0   157277.8   Grid distance:     1055.6
+
+ readinput() calling gridcheck_nests()
+ Reading OUTGRID
+
+readoutgrid diagnostics
+xtmp1, ytmp1 (in)  0.0000000000E+00  0.0000000000E+00
+xtmp2, ytmp2 (in)  2.8800000000E+05  3.0000000000E+05
+
+*** xyindex_to_ll_wrf error -- bad inputs
+    lgrid, x_i, y_j =   0   2.728E+02   2.842E+02
+ -68.9585571289     outgrid_swlon
+ -17.1519699097     outgrid_swlat
+ -65.9673614502     outgrid_nelon
+ -14.1520843506     outgrid_nelat
+out_xm0, out_ym0   0.0000000000E+00  0.0000000000E+00
+dxout,   dyout     1.0000000000E+03  1.0000000000E+03
+  #### FLEXPART MODEL ERROR! PART OF OUTPUT    ####
+  #### GRID IS OUTSIDE MODEL DOMAIN. CHANGE    ####
+  #### OUTGRID IN INPUT FILE                   ####
+./flex_data_out/
+ xmet0 (WRF), out_xm0 (FLX) :    0.00000000     <   0.00000000     ?
+ ymet0 (WRF), out_ym0 (FLX) :    0.00000000     <   0.00000000     ?
+ xr1 (WRF),   xr (FLX)      :    158333.328     >   288000.000     ?
+ yr1 (WRF),   yr (FLX)      :    158333.328     >   300000.000     ?
