@@ -1,0 +1,41 @@
+ the input file used is flexwrf.input in the local folder of the executable
+ Pre-generating random numbers
+ Calling readinput
+ Opening 'flexwrf.input                                                                                                                                                                                           ' for reading
+ Reading pathnames
+ option_verbose=         100
+              ----------------               
+  INFORMATION: SUBGRIDSCALE TERRAIN EFFECT IS
+  NOT PARAMETERIZED DURING THIS SIMULATION.  
+              ----------------               
+ SFC_OPTION =           0
+ nageclass           2
+ Opening file: ./AVAILABLE4 for reading
+ Opening file: ./AVAILABLE3 for reading
+ readinput() calling gridcheck()
+
+test_xyindex_to_ll_wrf calling map_set -- map_proj_id, map_set_proj_code =    3    1
+
+test_xyindex_to_ll_wrf -- lgrid, rmserr (km) =  0  6.08E-04
+
+
+
+# of vertical levels in WRF data
+    n_bottom_top & "true" nuvz:     49     49
+    nwz &     "augmented" nuvz:     50     50
+
+    nwzmax, nuvzmax, nzmax    :     61     61     61
+    nconvlevmax, nconvlev     :     60     48
+    nx, ny, nxmax, nymax      :    150    150    250    190
+
+Mother domain:
+  east-west   range:        0.0   157277.8   Grid distance:     1055.6
+  south-north range:        0.0   157277.8   Grid distance:     1055.6
+
+ readinput() calling gridcheck_nests()
+
+
+gridcheck_nests output for grid #  1
+
+gridcheck_nests fatal error -- parent grid not found for l =  1
+

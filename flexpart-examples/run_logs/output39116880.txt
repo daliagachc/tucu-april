@@ -1,0 +1,17 @@
+ the input file used is flexwrf.input in the local folder of the executable
+ Pre-generating random numbers
+ Calling readinput
+ Opening 'flexwrf.input                                                                                                                                                                                           ' for reading
+ Reading pathnames
+ option_verbose=         100
+              ----------------               
+  INFORMATION: SUBGRIDSCALE TERRAIN EFFECT IS
+  NOT PARAMETERIZED DURING THIS SIMULATION.  
+              ----------------               
+ SFC_OPTION =           0
+ nageclass           2
+ Opening file: ./AVAILABLE4 for reading
+ Opening file: ./AVAILABLE3 for reading
+  #### FLEXPART MODEL ERROR! FILE   #### 
+     ./AVAILABLE3
+  #### CANNOT BE OPENED             #### 
