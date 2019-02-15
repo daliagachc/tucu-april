@@ -2,7 +2,7 @@
 #SBATCH -e ./run_logs/error%j.txt
 #SBATCH -o ./run_logs/output%j.txt 
 #SBATCH -n 1	
-#SBATCH -t 03:10:00
+#SBATCH -t 00:10:00
 #SBATCH -p serial
 #SBATCH --mem-per-cpu=8000
 #SBATCH --mail-type=END

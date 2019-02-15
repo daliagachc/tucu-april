@@ -1,0 +1,19 @@
+ the input file used is flexwrf.input in the local folder of the executable
+ Pre-generating random numbers
+ Calling readinput
+ Opening 'flexwrf.input                                                                                                                                                                                           ' for reading
+ Reading pathnames
+ option_verbose=         100
+              ----------------               
+  INFORMATION: SUBGRIDSCALE TERRAIN EFFECT IS
+  NOT PARAMETERIZED DURING THIS SIMULATION.  
+              ----------------               
+ SFC_OPTION =           0
+ nageclass           2
+ Opening file: ./AVAILABLE3 for reading
+ Opening file: ./AVAILABLE4 for reading
+ readinput() calling gridcheck()
+ FLEXPART error: Too many grid points in x direction.
+ Reduce resolution of wind fields.
+ Or change parameter settings in file par_mod.
+ nx+1, nxmax =         273         250

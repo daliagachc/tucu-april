@@ -48,7 +48,7 @@
 =====================FORMER OUTGRID FILE=====================
     0            OUTLONLEFT      geograhical longitude of lower left corner of output grid
     0            OUTLATLOWER     geographical latitude of lower left corner of output grid
-    288              NUMXGRID        number of grid points in x direction (= # of cells )
+    20              NUMXGRID        number of grid points in x direction (= # of cells )
     300              NUMYGRID        number of grid points in y direction (= # of cells )
     1               OUTGRIDDEF      outgrid defined 0=using grid distance, 1=upperright corner coordinate
     158333          DXOUTLON        grid distance in x direction or upper right corner of output grid
