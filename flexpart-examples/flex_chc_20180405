@@ -1,7 +1,9 @@
 =====================FORMER PATHNAMES FILE===================
-./flex_data_out/
+../tucu-april-data/flex_data_out/
 /wrk/aliagadi/DONOTREMOVE/saltena_2018/tucu-april-data-v07/WRF/
 ./AVAILABLE4
+/wrk/aliagadi/DONOTREMOVE/saltena_2018/tucu-april-data-v07/WRF/
+./AVAILABLE3
 =============================================================
 =====================FORMER COMMAND FILE=====================
     1                LDIRECT:          1 for forward simulation, -1 for backward simulation
