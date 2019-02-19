@@ -328,8 +328,8 @@ def save_plots_double_domain_w(
     row3 = mega_l[d3].iloc[ind]
     row4 = mega_l[d4].iloc[ind]
 
-    nds3 = xr.open_dataset(row3.path).isel(Time=row3.wrf_index,bottom_top_stag=1)
-    nds4 = xr.open_dataset(row4.path).isel(Time=row4.wrf_index,bottom_top_stag=1)
+    nds3 = xr.open_dataset(row3.path).isel(Time=row3.wrf_index, bottom_top_stag=1)
+    nds4 = xr.open_dataset(row4.path).isel(Time=row4.wrf_index, bottom_top_stag=1)
     min_since_run = ye.dt64_2_iso(nds3.XTIME.values)
     print(min_since_run)
     file_name = 'w_{}-{}_t-{}.png'.format(d3, d4, min_since_run)
@@ -390,5 +390,105 @@ def plot_double_surface_w(
     ax.scatter(*ye.LOLA_CHC, c='r')
     ax.scatter(*ye.LOLA_LPZ, c='b')
     ax.set_aspect('equal')
+    plt.close(fig)
+    return fig
+
+
+def get_cross_section_around_chc(path, idx):
+    wrfin = netCDF4.Dataset(path)
+    z = wrf.getvar(wrfin, 'z', timeidx=idx)
+    wa = wrf.getvar(wrfin, 'wa', timeidx=idx)
+    lalo = wrf.CoordPair(
+        lat=ye.LOLA_CHC[1],
+        lon=ye.LOLA_CHC[0]
+    )
+    v_cross = wrf.vertcross(wa, z, pivot_point=lalo, angle=90, latlon=True, wrfin=wrfin)
+    re = v_cross.xy_loc
+    lons = [r.values.item().lon for r in re]
+    lons_a = re.copy()
+    lons_a.values = np.array(lons)
+    lons_a.name = ['lons']
+    v_cross = v_cross.assign_coords(lons=lons_a)
+    return v_cross
+
+
+def save_plots_double_domain_w_cross(
+        *,
+        dic_i,
+        ind,
+        plot_path,
+        d_pairs,
+        mega_l,
+):
+    d3 = d_pairs[dic_i]['d3']
+    d4 = d_pairs[dic_i]['d4']
+    par = d_pairs[dic_i]['par']
+    row3 = mega_l[d3].iloc[ind]
+    row4 = mega_l[d4].iloc[ind]
+
+    nds3 = get_cross_section_around_chc(row3.path, row3.wrf_index)
+    nds4 = get_cross_section_around_chc(row4.path, row4.wrf_index)
+    # print(nds3)
+    min_since_run = ye.dt64_2_iso(nds3.Time.values)
+    print(min_since_run)
+    file_name = 'w_cross_{}-{}_t-{}.png'.format(d3, d4, min_since_run)
+    mid_name = '{}-{}'.format(d3, d4, min_since_run)
+    print(file_name)
+    mid_path = os.path.join(plot_path, mid_name)
+    print(mid_path)
+    os.makedirs(mid_path, exist_ok=True)
+    file_path = os.path.join(mid_path, file_name)
+    print(file_path)
+    fig = plot_double_cross_w(nds3, nds4, d3, d4, par=par)
+
+    fig.savefig(file_path)
+
+    fig
+
+
+def plot_double_cross_w(
+        nds3, nds4, d3, d4,
+        cb_legend='surface W [m s-1]',
+        par=.2,
+        vm=-9,
+        vM=9,
+):
+    min_since_run = int(nds3.XTIME.values)
+    fig, ax = plt.subplots()
+
+    cmap = matplotlib.cm.RdBu_r
+    cmap.set_bad('black', 1.)
+    m1 = nds3.plot.imshow(x='lons', y='vertical', ax=ax, cmap=cmap, vmin=vm, vmax=vM, add_colorbar=False)
+    nds4.plot.imshow(x='lons', y='vertical', ax=ax, cmap=cmap, vmin=vm, vmax=vM, add_colorbar=False)
+    ax.set_ylabel('geo height [m]')
+    fig.set_size_inches(10, 7)
+
+    cb = fig.colorbar(m1)
+    cb.set_label(cb_legend)
+    # print(nds4)
+    # gb = wrf.geo_bounds(nds4)
+
+    # lam = gb.bottom_left.lat
+    lom = nds4.lons[0].values
+    # laM = gb.top_right.lat
+    loM = nds4.lons[-1].values
+
+    # lad = laM - lam
+    lod = loM - lom
+    # lap = lad * par
+    lop = lod * par
+
+    # ax.set_ylim(lam - lap, laM + lap)
+    ax.set_xlim(lom - lop, loM + lop)
+    ax.set_title(
+        '{} | t = {}\n din={} | dout={}'.format(
+            ye.dt64_2_iso(nds3.Time.values),
+            min_since_run
+            , d3, d4
+        )
+    )
+    # ax.scatter(*ye.LOLA_CHC, c='r')
+    # ax.scatter(*ye.LOLA_LPZ, c='b')
+    # ax.set_aspect('equal')
     plt.close(fig)
     return fig

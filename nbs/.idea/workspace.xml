@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4dd95e03-935c-4bcb-ab8e-7c2deef09b76" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot_surface_at_taito.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/plot_surface_at_taito.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tucu_saltena_fun.py" beforeDir="false" afterPath="$PROJECT_DIR$/tucu_saltena_fun.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vertica_w_tmp.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/vertica_w_tmp.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vertica_w_tmp.py" beforeDir="false" afterPath="$PROJECT_DIR$/vertica_w_tmp.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +17,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tucu_saltena_fun.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="354" column="12" selection-start-line="354" selection-start-column="12" selection-end-line="354" selection-end-column="12" />
+            <state relative-caret-position="395">
+              <caret line="461" column="4" selection-start-line="461" selection-start-column="4" selection-end-line="461" selection-end-column="4" />
               <folding>
                 <element signature="e#4597#4974#0" expanded="true" />
                 <element signature="e#4993#5013#0" expanded="true" />
@@ -29,7 +29,29 @@
                 <element signature="e#7698#8455#0" expanded="true" />
                 <element signature="e#8579#9619#0" expanded="true" />
                 <element signature="e#8700#8720#0" expanded="true" />
+                <element signature="e#9742#10233#0" expanded="true" />
+                <element signature="e#10365#11146#0" expanded="true" />
+                <element signature="e#11817#11830#0" expanded="true" />
+                <element signature="e#12280#12313#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vertica_w_tmp.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="525">
+              <caret line="109" selection-start-line="109" selection-end-line="109" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plot_w_speed_at_taito.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="296">
+              <caret line="122" column="36" selection-start-line="122" selection-start-column="36" selection-end-line="122" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -42,6 +64,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/vertica_w_tmp.py" />
         <option value="$PROJECT_DIR$/tucu_saltena_fun.py" />
       </list>
     </option>
@@ -126,12 +149,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1550568719612</updated>
-      <workItem from="1550568727221" duration="8645000" />
+      <workItem from="1550568727221" duration="11350000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8645000" />
+    <option name="totallyTimeSpent" value="11350000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="591" y="1175" width="1280" height="777" extended-state="6" />
@@ -141,8 +164,8 @@
       <window_info id="UI Designer" order="1" />
       <window_info id="DB Browser" order="2" />
       <window_info id="Favorites" order="3" sideWeight="0.51867664" side_tool="true" weight="0.26797387" />
-      <window_info id="Structure" order="4" sideWeight="0.48079878" side_tool="true" visible="true" weight="0.27221325" />
-      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.5192012" weight="0.27221325" />
+      <window_info id="Structure" order="4" sideWeight="0.48187312" side_tool="true" visible="true" weight="0.27221325" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.5181269" visible="true" weight="0.27221325" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -173,10 +196,24 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/vertica_w_tmp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="109" selection-start-line="109" selection-end-line="109" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plot_w_speed_at_taito.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="122" column="36" selection-start-line="122" selection-start-column="36" selection-end-line="122" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tucu_saltena_fun.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="354" column="12" selection-start-line="354" selection-start-column="12" selection-end-line="354" selection-end-column="12" />
+        <state relative-caret-position="395">
+          <caret line="461" column="4" selection-start-line="461" selection-start-column="4" selection-end-line="461" selection-end-column="4" />
           <folding>
             <element signature="e#4597#4974#0" expanded="true" />
             <element signature="e#4993#5013#0" expanded="true" />
@@ -187,6 +224,10 @@
             <element signature="e#7698#8455#0" expanded="true" />
             <element signature="e#8579#9619#0" expanded="true" />
             <element signature="e#8700#8720#0" expanded="true" />
+            <element signature="e#9742#10233#0" expanded="true" />
+            <element signature="e#10365#11146#0" expanded="true" />
+            <element signature="e#11817#11830#0" expanded="true" />
+            <element signature="e#12280#12313#0" expanded="true" />
           </folding>
         </state>
       </provider>
