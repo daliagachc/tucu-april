@@ -197,6 +197,20 @@ def set_dt_to_path(row):
     return ndw
 
 
+def wrf_get_base_tc_from_row(row, t1=0):
+    ds = xr.open_dataset(row.path)
+    ds.Time
+    b1=0
+    ds1 = ds.isel(Time=slice(t1,t1+2),bottom_top=slice(b1,b1+2))[['P','T','PB']].copy()
+    # ds1
+    save_path='/tmp/wrf_tmp'+str(t1)+str(np.random.randint(1000000))
 
+    try: os.remove(save_path)
+    except: pass
+    ds1.to_netcdf(save_path)
+    nds = wrf.getvar(netCDF4.Dataset(save_path),'tc',timeidx=0)[0]
+    return nds
 
-
+# def _get_fun(fun):
+#     res = np.array([fun(i).values for i in [nds3, nds4]])
+#     return res

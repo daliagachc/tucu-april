@@ -41,7 +41,7 @@ mega_l['d03']
 
 
 # %%
-file_l={'d04':mega_list}
+mega_list=mega_l['d04']
 
 # %%
 mega_list.sample(2)
@@ -433,4 +433,10 @@ fig.savefig('/tmp/fig.pdf')
 # %%
 
 
+
+
+# %%
+
+
+# %%
 
