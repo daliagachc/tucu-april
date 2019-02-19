@@ -289,17 +289,17 @@ def save_plots_double_domain(
         ind,
         plot_path,
         d_pairs,
-        mega_l
+        mega_l,
 ):
     d3 = d_pairs[dic_i]['d3']
     d4 = d_pairs[dic_i]['d4']
     row3 = mega_l[d3].iloc[ind]
     row4 = mega_l[d4].iloc[ind]
 
-    nds3 = wrf.getvar(netCDF4.Dataset(row3.path), 'tc')[0]
-    nds4 = wrf.getvar(netCDF4.Dataset(row4.path), 'tc')[0]
+    nds3 = wrf.getvar(netCDF4.Dataset(row3.path), 'tc', timeidx=row3.wrf_index)[0]
+    nds4 = wrf.getvar(netCDF4.Dataset(row4.path), 'tc', timeidx=row4.wrf_index)[0]
 
-    min_since_run = int(nds3.XTIME.values)
+    min_since_run = ye.dt64_2_iso(nds3.Time.values)
     file_name = '{}-{}_t-{}.png'.format(d3, d4, min_since_run)
     mid_name = '{}-{}'.format(d3, d4, min_since_run)
     print(file_name)

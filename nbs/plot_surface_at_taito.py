@@ -68,6 +68,3 @@ for ind in range(iind):
 
 # %%
 
-
-# %%
-
