@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4dd95e03-935c-4bcb-ab8e-7c2deef09b76" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Untitled1.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Untitled1.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Untitled1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Untitled1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wrf_out_temp_check.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/wrf_out_temp_check.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wrf_out_temp_check.py" beforeDir="false" afterPath="$PROJECT_DIR$/wrf_out_temp_check.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Untitled1.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Untitled1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tucu_saltena_fun.py" beforeDir="false" afterPath="$PROJECT_DIR$/tucu_saltena_fun.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,10 +18,15 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tucu_saltena_fun.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="925">
-              <caret line="200" selection-start-line="200" selection-end-line="210" selection-end-column="66" />
+            <state relative-caret-position="105">
+              <caret line="285" selection-start-line="285" selection-end-line="292" selection-end-column="2" />
               <folding>
+                <element signature="e#4597#4974#0" expanded="true" />
                 <element signature="e#4993#5013#0" expanded="true" />
+                <element signature="e#5284#6279#0" expanded="true" />
+                <element signature="e#5216#5236#0" expanded="true" />
+                <element signature="e#6366#6502#0" expanded="true" />
+                <element signature="e#6804#7489#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -39,11 +44,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="1280" />
-    <option name="y" value="23" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="591" />
+    <option name="y" value="1175" />
     <option name="width" value="1280" />
-    <option name="height" value="1417" />
+    <option name="height" value="777" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -119,15 +124,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1550568719612</updated>
-      <workItem from="1550568727221" duration="1051000" />
+      <workItem from="1550568727221" duration="4487000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1051000" />
+    <option name="totallyTimeSpent" value="4487000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1280" y="23" width="1280" height="1417" extended-state="0" />
+    <frame x="591" y="1175" width="1280" height="777" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
@@ -168,10 +173,15 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/tucu_saltena_fun.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="925">
-          <caret line="200" selection-start-line="200" selection-end-line="210" selection-end-column="66" />
+        <state relative-caret-position="105">
+          <caret line="285" selection-start-line="285" selection-end-line="292" selection-end-column="2" />
           <folding>
+            <element signature="e#4597#4974#0" expanded="true" />
             <element signature="e#4993#5013#0" expanded="true" />
+            <element signature="e#5284#6279#0" expanded="true" />
+            <element signature="e#5216#5236#0" expanded="true" />
+            <element signature="e#6366#6502#0" expanded="true" />
+            <element signature="e#6804#7489#0" expanded="true" />
           </folding>
         </state>
       </provider>

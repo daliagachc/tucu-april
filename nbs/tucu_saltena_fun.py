@@ -40,7 +40,6 @@ import di_python.ya_esta as ye
 # %%
 
 
-
 # %% [markdown]
 # # Constants 
 
@@ -184,33 +183,133 @@ def get_mega_list(d_string, file_list):
     mega_list = pd.concat(list(res))
     return mega_list
 
+
 def set_dt_to_path(row):
     path = row.path
     ds = xr.open_dataset(path)
     index = ds.Time.values
     dates = ds.XTIME.values
-    ndw = pd.DataFrame({'date':dates,'wrf_index':index})
+    ndw = pd.DataFrame({'date': dates, 'wrf_index': index})
     ndw = ndw.set_index('date')
-    ndw['name']= row['name']
-    ndw['dom']= row['dom']
-    ndw['path']= row['path']
+    ndw['name'] = row['name']
+    ndw['dom'] = row['dom']
+    ndw['path'] = row['path']
     return ndw
 
 
 def wrf_get_base_tc_from_row(row, t1=0):
     ds = xr.open_dataset(row.path)
     ds.Time
-    b1=0
-    ds1 = ds.isel(Time=slice(t1,t1+2),bottom_top=slice(b1,b1+2))[['P','T','PB']].copy()
+    b1 = 0
+    ds1 = ds.isel(Time=slice(t1, t1 + 2), bottom_top=slice(b1, b1 + 2))[['P', 'T', 'PB']].copy()
     # ds1
-    save_path='/tmp/wrf_tmp'+str(t1)+str(np.random.randint(1000000))
+    save_path = '/tmp/wrf_tmp' + str(t1) + str(np.random.randint(1000000))
 
-    try: os.remove(save_path)
-    except: pass
+    try:
+        os.remove(save_path)
+    except:
+        pass
     ds1.to_netcdf(save_path)
-    nds = wrf.getvar(netCDF4.Dataset(save_path),'tc',timeidx=0)[0]
+    nds = wrf.getvar(netCDF4.Dataset(save_path), 'tc', timeidx=0)[0]
     return nds
+
 
 # def _get_fun(fun):
 #     res = np.array([fun(i).values for i in [nds3, nds4]])
 #     return res
+
+def plot_double_surface_temp(
+        nds3, nds4, d3, d4,
+        cb_legend='surface temp [C]',
+        par=.2,
+        vm=-10,
+        vM=40,
+):
+    min_since_run = int(nds3.XTIME.values)
+    fig, ax = plt.subplots()
+    # nds3.plot.imshow()
+    # vm=min(fu_.get_fun(xr.DataArray.min))
+    # vM=max(fu_.get_fun(xr.DataArray.max))
+    m1 = nds3.plot(x='XLONG', y='XLAT', ax=ax, add_colorbar=False, vmin=vm, vmax=vM)
+    nds4.plot(x='XLONG', y='XLAT', ax=ax, add_colorbar=False, vmin=vm, vmax=vM)
+    fig.set_size_inches(10, 7)
+    cb = fig.colorbar(m1)
+    cb.set_label(cb_legend)
+
+    gb = wrf.geo_bounds(nds4)
+
+    lam = gb.bottom_left.lat
+    lom = gb.bottom_left.lon
+    laM = gb.top_right.lat
+    loM = gb.top_right.lon
+
+    lad = laM - lam
+    lod = loM - lom
+    lap = lad * par
+    lop = lod * par
+
+    ax.set_ylim(lam - lap, laM + lap)
+    ax.set_xlim(lom - lop, loM + lop)
+    ax.set_title(
+        '{} | t = {}\n din={} | dout={}'.format(
+            ye.dt64_2_iso(nds3.Time.values),
+            min_since_run
+            , d3, d4
+        )
+    )
+    ax.scatter(*ye.LOLA_CHC, c='r')
+    ax.scatter(*ye.LOLA_LPZ, c='b')
+    ax.set_aspect('equal')
+    plt.close(fig)
+    return fig
+
+
+def get_py_id(
+
+):
+    py_id = None
+    ho = os.path.expanduser('~')
+    # print(ho)
+    try:
+        file = open(ho + '/.py_id')
+        try:
+            py_id = file.readline()
+            py_id = py_id.replace('\n', '')
+        finally:
+            file.close()
+    except:
+        print('could not open file id')
+    # print(py_id)
+    return py_id
+
+
+def save_plots_double_domain(
+        *,
+        dic_i,
+        ind,
+        plot_path,
+        d_pairs,
+        mega_l
+):
+    d3 = d_pairs[dic_i]['d3']
+    d4 = d_pairs[dic_i]['d4']
+    row3 = mega_l[d3].iloc[ind]
+    row4 = mega_l[d4].iloc[ind]
+
+    nds3 = wrf.getvar(netCDF4.Dataset(row3.path), 'tc')[0]
+    nds4 = wrf.getvar(netCDF4.Dataset(row4.path), 'tc')[0]
+
+    min_since_run = int(nds3.XTIME.values)
+    file_name = '{}-{}_t-{}.png'.format(d3, d4, min_since_run)
+    mid_name = '{}-{}'.format(d3, d4, min_since_run)
+    print(file_name)
+    mid_path = os.path.join(plot_path, mid_name)
+    print(mid_path)
+    os.makedirs(mid_path, exist_ok=True)
+    file_path = os.path.join(mid_path, file_name)
+    print(file_path)
+    fig = plot_double_surface_temp(nds3, nds4, d3, d4, par=.2)
+
+    fig.savefig(file_path)
+
+    fig
