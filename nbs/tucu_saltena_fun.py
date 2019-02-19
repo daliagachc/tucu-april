@@ -313,3 +313,82 @@ def save_plots_double_domain(
     fig.savefig(file_path)
 
     fig
+
+
+def save_plots_double_domain_w(
+        *,
+        dic_i,
+        ind,
+        plot_path,
+        d_pairs,
+        mega_l,
+):
+    d3 = d_pairs[dic_i]['d3']
+    d4 = d_pairs[dic_i]['d4']
+    row3 = mega_l[d3].iloc[ind]
+    row4 = mega_l[d4].iloc[ind]
+
+    nds3 = xr.open_dataset(row3.path).isel(Time=row3.wrf_index,bottom_top_stag=1)
+    nds4 = xr.open_dataset(row4.path).isel(Time=row4.wrf_index,bottom_top_stag=1)
+    min_since_run = ye.dt64_2_iso(nds3.XTIME.values)
+    print(min_since_run)
+    file_name = 'w_{}-{}_t-{}.png'.format(d3, d4, min_since_run)
+    mid_name = '{}-{}'.format(d3, d4, min_since_run)
+    print(file_name)
+    mid_path = os.path.join(plot_path, mid_name)
+    print(mid_path)
+    os.makedirs(mid_path, exist_ok=True)
+    file_path = os.path.join(mid_path, file_name)
+    print(file_path)
+    fig = plot_double_surface_w(nds3, nds4, d3, d4, par=.2)
+
+    fig.savefig(file_path)
+
+    fig
+
+
+def plot_double_surface_w(
+        nds3, nds4, d3, d4,
+        cb_legend='surface W [m s-1]',
+        par=.2,
+        vm=-2,
+        vM=2,
+):
+    min_since_run = int(nds3.XTIME.values)
+    fig, ax = plt.subplots()
+    # nds3.plot.imshow()
+    # vm=min(fu_.get_fun(xr.DataArray.min))
+    # vM=max(fu_.get_fun(xr.DataArray.max))
+    # print(nds3.W)
+    m1 = nds3.W.plot(x='XLONG', y='XLAT', ax=ax, add_colorbar=False, vmin=vm, vmax=vM)
+    nds4.W.plot(x='XLONG', y='XLAT', ax=ax, add_colorbar=False, vmin=vm, vmax=vM)
+    fig.set_size_inches(10, 7)
+    cb = fig.colorbar(m1)
+    cb.set_label(cb_legend)
+
+    gb = wrf.geo_bounds(nds4)
+
+    lam = gb.bottom_left.lat
+    lom = gb.bottom_left.lon
+    laM = gb.top_right.lat
+    loM = gb.top_right.lon
+
+    lad = laM - lam
+    lod = loM - lom
+    lap = lad * par
+    lop = lod * par
+
+    ax.set_ylim(lam - lap, laM + lap)
+    ax.set_xlim(lom - lop, loM + lop)
+    ax.set_title(
+        '{} | t = {}\n din={} | dout={}'.format(
+            ye.dt64_2_iso(nds3.XTIME.values),
+            min_since_run
+            , d3, d4
+        )
+    )
+    ax.scatter(*ye.LOLA_CHC, c='r')
+    ax.scatter(*ye.LOLA_LPZ, c='b')
+    ax.set_aspect('equal')
+    plt.close(fig)
+    return fig
