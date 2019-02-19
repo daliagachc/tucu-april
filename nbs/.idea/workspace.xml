@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4dd95e03-935c-4bcb-ab8e-7c2deef09b76" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/tucu_saltena_fun.py" beforeDir="false" afterPath="$PROJECT_DIR$/tucu_saltena_fun.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Untitled1.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Untitled1.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Untitled1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Untitled1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wrf_out_temp_check.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/wrf_out_temp_check.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wrf_out_temp_check.py" beforeDir="false" afterPath="$PROJECT_DIR$/wrf_out_temp_check.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -116,12 +119,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1550568719612</updated>
-      <workItem from="1550568727221" duration="534000" />
+      <workItem from="1550568727221" duration="1051000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="534000" />
+    <option name="totallyTimeSpent" value="1051000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="23" width="1280" height="1417" extended-state="0" />

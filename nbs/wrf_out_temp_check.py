@@ -427,8 +427,7 @@ def get_fun(fun):
 fig.savefig('/tmp/fig.pdf')
 
 # %%
-
-
+f
 
 # %%
 

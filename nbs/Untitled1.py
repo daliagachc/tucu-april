@@ -23,7 +23,8 @@ TMP_DIR = '/tmp/aliagadi'
 TMP_DIR = '/tmp/wrf_tmp'
 dir_path = '../tucu-april-data/WRF/'
 dir_path = '../tucu-april-rm-data/WRF/'
-plot_path = '/'
+plot_path = '/tmp/aliagadi'
+plot_path = '/tmp/wrf_tmp'
 
 # %%
 
@@ -74,10 +75,15 @@ lop = lod * par
 
 ax.set_ylim(lam-lap,laM+lap)
 ax.set_xlim(lom-lop,loM+lop)
-ax.set_title('')
-
+ax.set_title()
 ax.scatter(*ye.LOLA_CHC,c='r')
 ax.scatter(*ye.LOLA_LPZ,c='b')
+
+# %%
+ax.set_title('sdf')
+
+# %%
+fig
 
 # %%
 

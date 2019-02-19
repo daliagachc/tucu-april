@@ -5,3 +5,4 @@
 **.DS_Store
 /nbs/wrf_python_tutorial
 /nbs/wrf_python_tutorial/**
+**__pycache__
