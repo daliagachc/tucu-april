@@ -1,0 +1,2 @@
+rm: cannot remove `./tucu-april-data/WRF//namelist.input': No such file or directory
+ starting wrf task            0  of            1

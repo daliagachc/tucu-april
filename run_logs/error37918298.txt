@@ -1,7 +1,0 @@
- starting wrf task            0  of            1
-slurmstepd: error: Step 37918298.0 exceeded memory limit (4449206 > 4096000), being killed
-srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
-slurmstepd: error: Exceeded job memory limit
-slurmstepd: error: *** STEP 37918298.0 ON c860 CANCELLED AT 2019-02-06T21:51:56 ***
-srun: error: c860: task 0: Killed
-srun: Terminating job step 37918298.0

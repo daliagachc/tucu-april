@@ -1,5 +1,0 @@
- starting wrf task            0  of            1
-srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
-slurmstepd: error: *** STEP 37829133.0 ON c936 CANCELLED AT 2019-02-05T16:08:01 ***
-srun: error: c936: task 0: Exited with exit code 1
-srun: Terminating job step 37829133.0

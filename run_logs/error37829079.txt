@@ -1,3 +1,0 @@
- starting wrf task            0  of            1
-srun: error: c933: task 0: Exited with exit code 1
-srun: Terminating job step 37829079.0
